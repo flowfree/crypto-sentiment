@@ -32,7 +32,7 @@ export default function GetSentiment() {
   }
 
   return (
-    <div className="mt-20 max-w-4xl mx-auto">
+    <div className="mt-14 max-w-4xl mx-auto">
       <div className="text-center">
         <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
           Crypto News Sentiment

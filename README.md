@@ -1,4 +1,5 @@
-News Sentiment Backend
-======================
+News Sentiment
+==============
 
-API endpoints for my News Sentiment project.
+API & web frontend to classify the sentiment of crypto news headlines.
+

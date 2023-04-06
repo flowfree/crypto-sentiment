@@ -13,7 +13,7 @@ export default function Layout({ children }: LayoutProps) {
       <footer className="bg-white mt-10">
         <div className="mx-auto max-w-full pb-3 px-8">
           <p className="text-sm text-gray-400 text-right">
-            Copyright &copy; 2023 Nashruddin Amin &bull; 
+            Copyright &copy; 2023 Nashruddin Amin {' '} &bull; {' '}
             <a href="https://github.com/flowfree/crypto-sentiment">
               Github
             </a>

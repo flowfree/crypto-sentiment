@@ -22,22 +22,9 @@ class NewsService extends BaseService {
     return this.client.get(nextUrl, { params })
   }
 
-  addNews(url: string, sentiment: string) {
-    return this.client.post(`/data-labeling/news`, { url, sentiment })
-  }
-  
-  updateNewsSentiment(news: News, sentiment: string) {
-    const { id, url } = news
-    return this.client.put(`/data-labeling/news/${id}`, { url, sentiment })
-  }
-
-  deleteNews(id: number) {
-    return this.client.delete(`/data-labeling/news/${id}`)
-  }
-
   getSentiment(url: string) {
     const params = { url }
-    return this.client.get(`/news-sentiment`, { params })
+    return this.client.post(`/predict`, { params })
   }
 }
 

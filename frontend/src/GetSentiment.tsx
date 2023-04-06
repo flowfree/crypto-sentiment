@@ -1,7 +1,7 @@
 import { useState } from 'react'
-import { PrimaryButton, SecondaryButton } from '../../components/Buttons'
-import NewsService from '../../services/NewsService'
-import SentimentLabel from '../../components/SentimentLabel'
+import { PrimaryButton, SecondaryButton } from './components/Buttons'
+import NewsService from './services/NewsService'
+import SentimentLabel from './components/SentimentLabel'
 import Moment from 'react-moment'
 
 export default function GetSentiment() {

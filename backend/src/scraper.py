@@ -11,7 +11,7 @@ def get_metadata_from_url(url: str) -> dict:
         'url': url,
         'title': '',
         'description': '',
-        'image_url': '',
+        'imageUrl': '',
         'published_time': None,
     }
 
@@ -44,7 +44,7 @@ def get_metadata_from_url(url: str) -> dict:
         if tag.get('property') == 'og:description':
             meta['description'] = tag.get('content')
         elif tag.get('property') == 'og:image':
-            meta['image_url'] = tag.get('content')
+            meta['imageUrl'] = tag.get('content')
         elif tag.get('property') == 'article:published_time':
             meta['published_time'] = tag.get('content')
 

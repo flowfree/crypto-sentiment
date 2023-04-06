@@ -12,7 +12,10 @@ interface News {
   description: string
   url: string
   imageUrl: string
-  sentiment: 'positive' | 'neutral' | 'negative'
+  sentiment: {
+    label: 'positive' | 'neutral' | 'negative'
+    score: number
+  }
   site: Site
   publishedTime: string
   createdAt: string

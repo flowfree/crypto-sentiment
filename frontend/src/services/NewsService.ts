@@ -23,8 +23,7 @@ class NewsService extends BaseService {
   }
 
   getSentiment(url: string) {
-    const params = { url }
-    return this.client.post(`/predict`, { params })
+    return this.client.post(`/predict`, { url })
   }
 }
 

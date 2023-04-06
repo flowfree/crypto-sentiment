@@ -32,7 +32,7 @@ export default function GetSentiment() {
   }
 
   return (
-    <div className="mt-10 max-w-4xl mx-auto">
+    <div className="mt-20 max-w-4xl mx-auto">
       <div className="text-center">
         <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
           Crypto News Sentiment
@@ -41,7 +41,7 @@ export default function GetSentiment() {
           Get the pulse of the news with our sentiment analysis and uncovering the emotions behind the headlines.
         </p>
       </div>
-      <form method="post" action="" onSubmit={handleSubmit} className="mt-10 flex grow gap-2">
+      <form method="post" action="" onSubmit={handleSubmit} className="mt-12 flex grow gap-2">
         <input 
           type="text" 
           name="url"
@@ -68,11 +68,11 @@ interface PreviewProps {
 }
 
 function Preview({ news }: PreviewProps) {
-  const s = news.sentiment
+  const s = news.sentiment.label
   const borderColor = (s === 'positive' ? 'green' : (s === 'negative' ? 'red' : 'gray'))
 
   return (
-    <div className={`group relative mt-10 flex flex-col gap-5 md:flex-row overflow-hidden rounded-lg border border-${borderColor}-300`}>
+    <div className={`group relative mt-14 flex flex-col gap-5 md:flex-row overflow-hidden rounded-lg border border-${borderColor}-300`}>
       <div className="aspect-[4/3] bg-gray-200 h-56">
         <a href={news.url} target="_blank">
           <img src={news.imageUrl} className="h-full w-full object-cover object-center" alt="image" />
@@ -81,8 +81,8 @@ function Preview({ news }: PreviewProps) {
       <div className="flex flex-1 flex-col space-y-3 py-3 pr-5">
         <div className="flex gap-x-2 text-base">
           {news.sentiment && (
-            <SentimentLabel sentiment={news.sentiment} className="text-base">
-              Sentiment is {news.sentiment}
+            <SentimentLabel sentiment={news.sentiment.label} className="text-base">
+              Sentiment is {news.sentiment.label}
             </SentimentLabel>
           )}
         </div>
